@@ -1,6 +1,8 @@
 const wrapper = document.getElementById("wrapper");
 const footer = document.querySelector('.footer');
 const playAgain = document.querySelector('.play-again');
+const scorePara = document.querySelector('#score');
+
 console.log(footer);
 let arr = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
 
@@ -31,7 +33,7 @@ cards.forEach((element) => {
     e.target.disabled = true;
     if (cardChosen.length === 2) {
       setTimeout(checkForMatch, 500);
-
+      countScore()
     }
 
     function checkForMatch() {
@@ -44,6 +46,7 @@ cards.forEach((element) => {
           if (optionOne === +card.innerText && optionTwo === +card.innerText) {
             card.classList.add("invisible");
             score = score + 5;
+            countScore()
           }
         });
       }
@@ -61,6 +64,7 @@ cards.forEach((element) => {
      
       if(score === 0) {
           wrapper.innerHTML = `<p>Your score: ${score}</p> `;
+          scorePara.classList.add('invisible')
       }
 
       if(counter === 6){
@@ -76,3 +80,6 @@ playAgain.addEventListener('click', ()=> {
     document.location.reload();
 })
 //
+function countScore () {
+  scorePara.innerText = score;
+}
