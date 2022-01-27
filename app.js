@@ -68,7 +68,7 @@ cards.forEach((element) => {
       }
 
       if(counter === 6){
-        wrapper.innerHTML = `<p>Your score: ${score}</p> `;
+        wrapper.innerHTML = `<p>CONGRATULATIONS</p> `;
 
       }
        
@@ -81,5 +81,5 @@ playAgain.addEventListener('click', ()=> {
 })
 //
 function countScore () {
-  scorePara.innerText = score;
+  scorePara.innerText = `${score} points`;
 }
