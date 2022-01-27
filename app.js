@@ -75,3 +75,4 @@ cards.forEach((element) => {
 playAgain.addEventListener('click', ()=> {
     document.location.reload();
 })
+//
