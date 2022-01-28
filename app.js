@@ -18,14 +18,14 @@ function setup() {
 setup();
 
 let cardChosen = [];
-let score = 120;
+let score = 5;
 counter = 0;
 
 const cards = document.querySelectorAll(".number");
 
 cards.forEach((element) => {
   element.addEventListener("click", (e) => {
-    score = score - 5;
+    
     cardChosen.push(+e.target.innerText);
     console.log(cardChosen);
     e.target.classList.remove("black");
@@ -33,7 +33,6 @@ cards.forEach((element) => {
     e.target.disabled = true;
     if (cardChosen.length === 2) {
       setTimeout(checkForMatch, 500);
-      countScore()
     }
 
     function checkForMatch() {
@@ -45,10 +44,13 @@ cards.forEach((element) => {
         cards.forEach((card) => {
           if (optionOne === +card.innerText && optionTwo === +card.innerText) {
             card.classList.add("invisible");
-            score = score + 5;
-            countScore()
+          
+
+           
           }
         });
+        score = score + 10;
+        countScore()
       }
       if (optionOne !== optionTwo) {
         cards.forEach((card) => {
@@ -57,12 +59,14 @@ cards.forEach((element) => {
           card.disabled = false;
 
         });
+        score = score - 5;
+          setTimeout( countScore(), 500)
       }
      
       cardChosen = [];
       console.log(cardChosen);
      
-      if(score === 0) {
+      if(score < -30) {
           wrapper.innerHTML = `<p>Your score: ${score}</p> `;
           scorePara.classList.add('invisible')
       }
