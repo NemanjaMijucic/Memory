@@ -1,114 +1,124 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    text-align: center;
-    background: repeating-linear-gradient(45deg, rgb(211, 82, 82), rgb(219, 95, 219),rgb(41, 218, 41));
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100vh;
-   
+body {
+  text-align: center;
+  background: repeating-linear-gradient(
+    45deg,
+    rgb(211, 82, 82),
+    rgb(219, 95, 219),
+    rgb(41, 218, 41)
+  );
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
 }
-#wrapper{
+#wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 900px;
+}
+h1 {
+  margin-bottom: 15px;
+}
+
+.number {
+  width: 180px;
+  height: 180px;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 170px;
+  text-align: center;
+  border: 3px solid rgb(247, 242, 242);
+  border-radius: 5px;
+  margin: 5px;
+  color: black;
+}
+
+p {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 5rem;
+}
+
+.faded {
+  background-color: blac;
+}
+
+.black {
+  background-color: black;
+  transition: 400ms;
+}
+
+.white {
+  background-color: rgb(209, 205, 205);
+}
+.invisible {
+  background-color: rgb(51, 50, 49);
+  font-size: 10px;
+  visibility: hidden;
+  transition: 500ms;
+}
+.footer {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer button {
+  width: 30%;
+  padding: 10px;
+  font-size: 2rem;
+  background: repeating-linear-gradient(
+    45deg,
+    rgb(238, 27, 27),
+    rgb(41, 218, 41)
+  );
+  color: rgb(12, 10, 10);
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .number {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+    border: 3px solid rgb(247, 242, 242);
+    border-radius: 5px;
+    margin: 5px;
+    color: black;
+  }
+  #wrapper {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 900px;
-}
-h1{
-    margin-bottom: 15px;
-}
-
-.number{
-    width: 180px;
-    height: 180px;
-    font-size: 4rem;
-    font-weight: bold;
-    line-height: 170px;
-    text-align: center;
-    border:3px solid rgb(247, 242, 242);
-    border-radius: 5px;
-    margin: 5px;
-    color: black;
-}
-
-p{
+    width: 400px;
+  }
+  p {
     text-align: center;
     margin: 0 auto;
-    font-size: 5rem;
-}
-
-.faded{
-    background-color: blac;
-}
-
-.black{
-    background-color: black;
-    transition: 400ms;
-}
-
-.white{
-    background-color: rgb(209, 205, 205);
-}
-.invisible{
-    background-color: rgb(51, 50, 49);
-    font-size: 10px;
-    visibility: hidden;
-    transition: 500ms;
-}
-.footer{
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-.footer button{
+    font-size: 2rem;
+  }
+  .footer button {
     width: 30%;
     padding: 10px;
-    font-size: 2rem;
-    background: repeating-linear-gradient(45deg, rgb(238, 27, 27),rgb(41, 218, 41));
+    height: 40px;
+    font-size: 1rem;
+    background: repeating-linear-gradient(
+      45deg,
+      rgb(238, 27, 27),
+      rgb(41, 218, 41)
+    );
     color: rgb(12, 10, 10);
     border-radius: 5px;
-}
-
-
-@media screen and (max-width: 600px) {
-    .number{
-        width: 50px;
-        height: 50px;
-        font-size: 1rem;
-        font-weight: bold;
-        line-height: 50px;
-        text-align: center;
-        border:3px solid rgb(247, 242, 242);
-        border-radius: 5px;
-        margin: 5px;
-        color: black;
-    }
-    #wrapper{
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 400px;
-    }
-    p{
-        text-align: center;
-        margin: 0 auto;
-        font-size: 2rem;
-    }
-    .footer button{
-        width: 30%;
-        padding: 10px;
-        height: 40px;
-        font-size: 1rem;
-        background: repeating-linear-gradient(45deg, rgb(238, 27, 27),rgb(41, 218, 41));
-        color: rgb(12, 10, 10);
-        border-radius: 5px;
-    }
   }
+}
