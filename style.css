@@ -102,4 +102,13 @@ p{
         margin: 0 auto;
         font-size: 2rem;
     }
+    .footer button{
+        width: 30%;
+        padding: 10px;
+        height: 40px;
+        font-size: 1rem;
+        background: repeating-linear-gradient(45deg, rgb(238, 27, 27),rgb(41, 218, 41));
+        color: rgb(12, 10, 10);
+        border-radius: 5px;
+    }
   }
